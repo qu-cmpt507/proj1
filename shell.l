@@ -3,10 +3,13 @@
 
 #include <stdio.h>
 #include <strings.h>
+#include <string.h>
 
 int _numargs = 200;
 char *_args[200];
 int _argcount = 0;
+char *strdup(const char *);
+int fileno(FILE *);
 %}
 
 WORD [a-zA-Z0-9\/\.-]+
@@ -30,4 +33,4 @@ SPECIAL [()><|&;]
 
 %%
 
-char **getline() { return (char **)yylex(); }
+char **getline(void) { return (char **)yylex(); }

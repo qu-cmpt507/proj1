@@ -5,9 +5,9 @@
 #include <sys/types.h>
 #include <errno.h>
 
-extern char **getline();
+extern char **getline(void);
 
-int main() {
+int main(void) {
   int i;
   char **args; 
 
